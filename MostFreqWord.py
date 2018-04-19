@@ -1,11 +1,11 @@
 
-file_name = input("Enter file name: ")
-file = open(file_name, 'r')
+file_name = 'test.txt'
+file = open(file_name)
 
-counts = dict()
+counts = {}
 
 for line in file:
-    words = line.split()
+    words = line.split(' ')
     for word in words:
         counts[word] = counts.get(word, 0) + 1
 
